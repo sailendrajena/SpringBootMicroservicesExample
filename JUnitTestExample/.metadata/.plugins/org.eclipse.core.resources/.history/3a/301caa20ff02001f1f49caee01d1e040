@@ -1,0 +1,29 @@
+package com.spring.junit.test.api.controller;
+
+import java.util.List;
+
+import org.modelmapper.ModelMapper;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.spring.junit.test.api.entity.Book;
+import com.spring.junit.test.api.responseClasses.BookResponse;
+import com.spring.junit.test.api.services.BookService;
+
+@RestController
+@RequestMapping("/api/v1/")
+public class BookController {
+
+	@Autowired
+	private BookService services;
+	
+	@Autowired
+	private ModelMapper mapper;
+	
+	@GetMapping("books")
+	public List<BookResponse> getAllBooks(){
+		return services.getAllBooks().stream().map(book->mapper.map(book, BookResponse.class)).toList();
+	}
+}

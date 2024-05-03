@@ -1,0 +1,13 @@
+package com.builder.pattern.example;
+
+public class TestBuilderPatternExample {
+	public static void main(String[] args) {
+		Computer computerHDDRAM = new Computer.ComputerBuilder("500GB", "2GB").build();
+		Computer computerBTGC = new Computer.ComputerBuilder("1TB", "4GB").setGraphicCardEnable(true)
+				.setBluetoothEnable(true).build();
+
+		// For only HDD and RAM
+		System.out.println("HDD: " + computerHDDRAM.getHDD());
+		System.out.println("RAM: " + computerHDDRAM.getRAM());
+	}
+}

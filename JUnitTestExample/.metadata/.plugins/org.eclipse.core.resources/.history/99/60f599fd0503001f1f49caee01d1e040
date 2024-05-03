@@ -1,0 +1,30 @@
+package com.spring.junit.test.api.services;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.mockito.Mockito.when;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.mock.mockito.MockBean;
+
+import com.spring.junit.test.api.exception.BookNotFoundException;
+import com.spring.junit.test.api.repository.BookRepository;
+
+public class TestHandleExceptionAPI {
+	
+	@Autowired
+	private BookService services;
+	
+	@MockBean
+	private BookRepository repo;
+	
+	@Test
+	public void assertThrowWithNoMessage() {
+		
+		BookNotFoundException bookNotFoundException = assertThrows(BookNotFoundException.class,
+				() -> services.findBookByName("Java"));
+		when(repo.findBookByName("Java")).then(return "Book not found in Book Store");
+		assertEquals("Book not found in Book Store!", bookNotFoundException.getMessage());
+	}
+}

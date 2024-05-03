@@ -1,0 +1,5 @@
+package com.spring.junit.test.api.responseClasses;
+
+public class BookResponse {
+
+}

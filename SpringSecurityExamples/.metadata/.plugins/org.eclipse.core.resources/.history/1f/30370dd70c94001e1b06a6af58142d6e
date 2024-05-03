@@ -1,0 +1,5 @@
+package com.spring.external.api.controller;
+
+public class ExternalAPICallController {
+
+}

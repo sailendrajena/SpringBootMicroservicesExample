@@ -1,0 +1,101 @@
+package com.core.stream.example;
+
+import java.time.LocalDate;
+import java.time.LocalTime;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.HashSet;
+import java.util.LinkedHashMap;
+import java.util.List;
+import java.util.Set;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
+
+public class ConvertArrayToStreamToList {
+	public static void main(String[] args) {
+		Integer[] intArr = new Integer[] { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+		List<Integer> intList = Stream.of(intArr).toList();
+		System.out.println(intList);
+		// Find out number greater than 5
+		List<Integer> numGrtFive = intList.stream().filter(num -> num > 5).collect(Collectors.toList());
+		System.out.println(numGrtFive);
+
+		// Find Duplicate Numbers in List
+		List<Integer> intDupList = Arrays.asList(1, 2, 3, 1, 2, 3, 4, 5, 4, 5);
+		Set<Integer> dupList = new HashSet<Integer>();
+		List<Integer> dupNumList = intDupList.stream().filter(num -> !dupList.add(num)).collect(Collectors.toList());
+		System.out.println(dupNumList);
+
+		// Find the number Start with 1
+		List<String> numStartWithOne = intDupList.stream().map(s -> s + "").filter(num -> num.startsWith("1"))
+				.collect(Collectors.toList());
+		System.out.println(numStartWithOne);
+
+		// Find even number and odd number from the list
+		List<Integer> evenNumList = intDupList.stream().filter(num -> num % 2 == 0).collect(Collectors.toList());
+		List<Integer> oddNumList = intDupList.stream().filter(num -> num % 2 != 0).collect(Collectors.toList());
+		System.out.println("Even Number List: " + evenNumList);
+		System.out.println("Odd Number List: " + oddNumList);
+
+		// Find Prime number list
+		List<Integer> primeNumList = intDupList.stream().filter(num -> num / 2 != 0).filter(num -> num / 2 != 1)
+				.collect(Collectors.toList());
+		System.out.println("Prime Number List: " + primeNumList);
+
+		// Find first number from the list if exist using stream
+		List<Integer> myList = Arrays.asList(10, 15, 8, 49, 25, 98, 98, 32, 15);
+		List<Integer> myEmptyList = Arrays.asList();
+		myList.stream().findFirst().ifPresent(System.out::println);
+		myEmptyList.stream().findFirst().ifPresent(System.out::println);
+
+		// Find Total number of elements present in the list using stream
+		long count = myList.stream().count();
+		System.out.println(count);
+
+		// Find the max & min value present in the list using Stream
+		long max = myList.stream().max(Integer::compare).get();
+		System.out.println("Maximum value in the list: " + max);
+		long min = myList.stream().min(Integer::compare).get();
+		System.out.println("Minimum value in the list: " + min);
+
+		// Find the repeated character in the string using Stream
+		String name = "Sailendra Narayan Jena";
+
+		List<Character> result = name.chars().mapToObj(s -> Character.toLowerCase((char) s))
+				.collect(Collectors.groupingBy(Function.identity(), LinkedHashMap::new, Collectors.counting()))
+				.entrySet().stream().filter(entry -> entry.getValue() > 1L).map(entry -> entry.getKey())
+				.collect(Collectors.toList());
+		System.out.println(result);
+
+		// Find the non-repeated character in String using stream
+		List<Character> nonRepeatedChars = name.chars().mapToObj(s -> Character.toLowerCase((char) s))
+				.collect(Collectors.groupingBy(Function.identity(), LinkedHashMap::new, Collectors.counting()))
+				.entrySet().stream().filter(entry -> entry.getValue() == 1L).map(entry -> entry.getKey())
+				.collect(Collectors.toList());
+		System.out.println(nonRepeatedChars);
+
+		// Find the list with sorted format using stream
+		List<Integer> sorterList = myList.stream().sorted().collect(Collectors.toList());
+		System.out.println(sorterList);
+
+		// Find the list with descending order sorted format using stream
+		List<Integer> descSortedList = myList.stream().sorted(Collections.reverseOrder()).toList();
+		System.out.println(descSortedList);
+
+		// Convert Array into List and then return true if any repeated number present
+		// or return false if non-repeated number present in the list
+		Integer[] intVal = new Integer[] {10,15,8,49,25,98,98,32,15};
+		List<Integer> intLists = Stream.of(intVal).toList();
+		Set<Integer> intSet = new HashSet<Integer>(intLists);
+		if(intSet.size() == intLists.size()) {
+			System.out.println(true);
+		}else {
+			System.out.println(false);
+		}
+		
+		//Find the current Date & Time using Java 8 Date and Time
+		System.out.println("Current Local Date: "+LocalDate.now());
+		System.out.println("Current Local Time: "+LocalTime.now());
+	}
+}

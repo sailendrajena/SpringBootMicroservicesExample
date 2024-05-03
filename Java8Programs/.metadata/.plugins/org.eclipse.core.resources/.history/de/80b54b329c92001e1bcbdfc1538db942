@@ -1,0 +1,13 @@
+package com.core.olor;
+
+class Test{
+	public void test(int i) {
+		System.out.println("Inside int parameter test() method");
+	}
+}
+
+public class OLORConcept {
+	public static void main(String[] args) {
+		
+	}
+}

@@ -1,0 +1,11 @@
+package com.immutableClass.examples;
+
+import java.util.List;
+
+public class ImmutableListExamples {
+	public static void main(String[] args) {
+		List<Integer> intList = List.of(1,2,3,4,5,6);
+		intList.add(9);
+		System.out.println();
+	}
+}

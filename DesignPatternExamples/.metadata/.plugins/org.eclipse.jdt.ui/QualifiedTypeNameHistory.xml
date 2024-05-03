@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="com.builder.pattern.example.Computer"/>
+    <fullyQualifiedTypeName name="com.builder.pattern.example.Computer.ComputerBuilder"/>
+    <fullyQualifiedTypeName name="com.builder.pattern.example.Student"/>
+    <fullyQualifiedTypeName name="com.builder.pattern.example.Student.StudentBuilder"/>
+</qualifiedTypeNameHistroy>

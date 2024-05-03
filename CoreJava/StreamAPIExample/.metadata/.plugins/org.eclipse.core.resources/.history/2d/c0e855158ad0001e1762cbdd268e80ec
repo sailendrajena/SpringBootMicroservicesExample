@@ -1,0 +1,45 @@
+package com.core.stream.example;
+
+class Employee {
+	int id;
+	int name;
+	int age;
+
+	public Employee(int id, int name, int age) {
+		this.id = id;
+		this.name = name;
+		this.age = age;
+	}
+
+	public Employee() {
+		
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public int getName() {
+		return name;
+	}
+
+	public void setName(int name) {
+		this.name = name;
+	}
+
+	public int getAge() {
+		return age;
+	}
+
+	public void setAge(int age) {
+		this.age = age;
+	}
+}
+
+public class SortEmployeeByAge {
+
+}

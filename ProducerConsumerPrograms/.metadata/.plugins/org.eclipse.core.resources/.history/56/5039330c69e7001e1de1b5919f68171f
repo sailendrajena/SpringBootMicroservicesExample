@@ -1,0 +1,5 @@
+package com.producer.consumer.example;
+
+public class ThreadExample {
+
+}
