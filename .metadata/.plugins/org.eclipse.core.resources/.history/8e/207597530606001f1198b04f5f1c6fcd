@@ -1,0 +1,2 @@
+spring.application.name=spring-elk-integration
+logging.file.name=C:/elk_stack/elktest.log

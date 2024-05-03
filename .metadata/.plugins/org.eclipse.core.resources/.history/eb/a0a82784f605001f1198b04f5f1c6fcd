@@ -1,0 +1,4 @@
+spring.application.name=spring-monitoring-client-app
+
+#spring boot admin server
+spring.boot.admin.client.url=http://localhost:9090

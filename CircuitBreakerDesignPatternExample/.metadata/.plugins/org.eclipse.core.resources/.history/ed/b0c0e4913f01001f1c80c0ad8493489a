@@ -1,0 +1,5 @@
+package com.spring.cb.core.api.controller;
+
+public class MovieController {
+
+}

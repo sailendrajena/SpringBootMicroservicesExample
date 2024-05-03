@@ -1,0 +1,4 @@
+spring.application.name=employee-service-client
+
+#admin server configuration
+spring.boot.admin.client.url=http://localhost:9090
