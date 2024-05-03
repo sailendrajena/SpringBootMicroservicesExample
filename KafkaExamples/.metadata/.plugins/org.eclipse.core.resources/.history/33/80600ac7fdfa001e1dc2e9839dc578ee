@@ -1,5 +1,0 @@
-package com.kafka.publisher.core.dto;
-
-public class Customer {
-
-}

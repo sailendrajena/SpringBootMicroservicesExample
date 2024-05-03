@@ -1,5 +1,0 @@
-package com.kafka.consumer.core.dto;
-
-public class Customer {
-
-}

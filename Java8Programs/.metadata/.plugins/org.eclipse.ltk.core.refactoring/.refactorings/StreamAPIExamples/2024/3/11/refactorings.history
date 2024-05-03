@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Rename compilation unit &apos;com.core.stream.map.StreamIteratorExample.java&apos; to &apos;StreamSortSalaryExample.java&apos;&#x0D;&#x0A;- Original project: &apos;StreamAPIExamples&apos;&#x0D;&#x0A;- Original element: &apos;com.core.stream.map.StreamIteratorExample.java&apos;&#x0D;&#x0A;- Renamed element: &apos;com.core.stream.map.StreamSortSalaryExample.java&apos;" description="Rename compilation unit &apos;StreamIteratorExample.java&apos;" flags="2" id="org.eclipse.jdt.ui.rename.compilationunit" input="/src&lt;com.core.stream.map{StreamIteratorExample.java" name="StreamSortSalaryExample.java" references="false" stamp="1710260294999" version="1.0"/>
-</session>

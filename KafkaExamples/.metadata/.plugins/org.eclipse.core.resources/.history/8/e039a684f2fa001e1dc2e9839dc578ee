@@ -1,5 +1,0 @@
-package com.kafka.publisher.core.controller;
-
-public class PublisherController {
-
-}

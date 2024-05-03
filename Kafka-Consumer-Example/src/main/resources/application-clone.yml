@@ -1,0 +1,10 @@
+spring:
+    application:
+        name: Kafka-Consumer-Example
+    kafka:
+        consumer:
+            bootstrap-server: localhost:9092
+            group-id: sb-consume-131
+
+server:
+    port: 9292

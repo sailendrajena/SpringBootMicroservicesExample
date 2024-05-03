@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Rename resource &apos;kafka-installation/docker-compose-yaml&apos; to &apos;docker-compose.yml&apos;" description="Rename resource &apos;docker-compose-yaml&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="docker-compose-yaml" name="docker-compose.yml" stamp="1712906815373" updateReferences="true"/>
-</session>

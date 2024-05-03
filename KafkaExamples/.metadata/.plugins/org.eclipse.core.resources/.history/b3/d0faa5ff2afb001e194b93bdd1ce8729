@@ -1,5 +1,0 @@
-package com.kafka.consumer.core.config;
-
-public class ConsumerConfig {
-
-}

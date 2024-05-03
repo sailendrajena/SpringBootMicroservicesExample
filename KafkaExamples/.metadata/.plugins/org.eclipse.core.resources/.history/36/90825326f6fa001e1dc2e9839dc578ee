@@ -1,5 +1,0 @@
-package com.kafka.consumer.core.services;
-
-public class KafkaConsumer {
-
-}

@@ -1,5 +1,0 @@
-package com.spring.external.api.config;
-
-public class WebConfig {
-
-}

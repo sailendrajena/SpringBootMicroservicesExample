@@ -1,9 +1,0 @@
-package com.spring.junit.test.api.repository;
-
-import org.springframework.data.jpa.repository.JpaRepository;
-
-import com.spring.junit.test.api.entity.Book;
-
-public interface BookRepository extends JpaRepository<Book, Long> {
-
-}
